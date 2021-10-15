@@ -9,12 +9,14 @@ public class EnemyMotor : MonoBehaviour
     Animator anim;
     public Transform MovePoint;
     public float Speed;
+
     private void Start()
     {
         _transform = transform;
         MovePoint.parent = null;
         anim = MovePoint.GetComponent<Animator>();
     }
+
     private void Update()
     {
         _transform.position = Vector3.MoveTowards(_transform.position, MovePoint.position, Time.deltaTime * Speed);
@@ -22,11 +24,11 @@ public class EnemyMotor : MonoBehaviour
 
       if(Vector3.Distance(_transform.position,MovePoint.position) < 0.2f)
         {
-            anim.SetBool("animate", true);
+            anim.enabled = true;
         }
         else
         {
-            anim.SetBool("animate", false);
+            anim.enabled = false;
         }
     }
 
