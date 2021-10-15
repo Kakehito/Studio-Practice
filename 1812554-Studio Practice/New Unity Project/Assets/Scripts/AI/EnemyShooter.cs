@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class EnemyShooter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public float FireRate;
+    float rate;
+    public Transform BulletType;
+    private void Start()
     {
+        rate = FireRate;
+    }
         
+    private void Update()
+    {
+        rate -= Time.deltaTime;
+
+        if (rate <= 0)
+        {
+            Instantiate(BulletType, transform.position, transform.rotation);
+
+            rate = FireRate;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
+
 }
