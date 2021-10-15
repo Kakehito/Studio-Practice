@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyMotor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    Transform _transform;
+    public Transform MovePoint;
+    public float Speed;
+    private void Start()
     {
-        
+        _transform = transform;
+    }
+    private void Update()
+    {
+        _transform.position = Vector3.MoveTowards(_transform.position, MovePoint.position, Time.deltaTime * Speed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
