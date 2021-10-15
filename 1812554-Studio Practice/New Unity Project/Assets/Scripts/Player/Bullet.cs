@@ -11,4 +11,13 @@ public class Bullet : MonoBehaviour
     {
         transform.localPosition += new Vector3(0, 0, (transform.localPosition.z + speed) * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Enemy")
+        {
+            collision.transform.GetComponent<EnemyAI>().Health--;
+        }
+        Destroy(gameObject);
+    }
 }

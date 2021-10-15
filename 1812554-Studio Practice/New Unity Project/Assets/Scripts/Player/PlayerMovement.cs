@@ -7,11 +7,15 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 6f;
-
-
+    public int Health = 3;
+    public int AttackDamage = 1;
+    public int Shield = 0;
     // Update is called once per frame
     void Update()
     {
+
+
+        #region Movement
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -20,5 +24,11 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.Move(direction * speed * Time.deltaTime);
         }
+
+        #endregion
+
+
+
+  
     }
 }
