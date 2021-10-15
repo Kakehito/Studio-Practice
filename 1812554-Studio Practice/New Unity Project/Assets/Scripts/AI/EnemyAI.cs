@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
 
 
-    public Animator anim;
+    Animator anim;
     public Transform MovePoint;
     public float Speed;
 
@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
     {
  
         MovePoint.parent = null;
-    
+        anim = MovePoint.GetComponent<Animator>();
     }
 
     private void Update()
@@ -26,18 +26,20 @@ public class EnemyAI : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, MovePoint.position, Time.deltaTime * Speed);
 
 
-
-
+        
         if(Health <= 0)
         {
             Destroy(gameObject);
         }
-        if (Vector3.Distance(transform.position, MovePoint.position) == .5f)
+        if (Vector3.Distance(transform.position, MovePoint.position) <= .1f)
         {
             anim.enabled = true;
+          
+
         }
         else
         {
+     
             anim.enabled = false;
         }
      
