@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public int Health = 3;
     public int AttackDamage = 1;
     public int Shield = 0;
+    public int Bombs = 0;
     // Update is called once per frame
     void Update()
     {
