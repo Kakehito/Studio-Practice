@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6045448799262105193}
   - component: {fileID: 6045448799262105192}
   - component: {fileID: 6045448799262105199}
-  - component: {fileID: 6045448799262105195}
   - component: {fileID: 6045448799262105198}
+  - component: {fileID: 8641259520277936069}
   m_Layer: 0
   m_Name: PlayerPlaceholder
   m_TagString: Untagged
@@ -98,7 +98,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &6045448799262105195
+--- !u!114 &6045448799262105198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045448799262105197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa82ce366a7c7a040890ba66054247ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  Health: 3
+  AttackDamage: 1
+  Shield: 0
+  Bombs: 0
+  bombBar: {fileID: 0}
+  bombCounter:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!143 &8641259520277936069
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,24 +138,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6045448799262105198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6045448799262105197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa82ce366a7c7a040890ba66054247ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 6045448799262105195}
-  speed: 6
-  Health: 3
-  AttackDamage: 1
-  Shield: 0
-  Bombs: 0
 --- !u!1 &6045448800361100577
 GameObject:
   m_ObjectHideFlags: 0

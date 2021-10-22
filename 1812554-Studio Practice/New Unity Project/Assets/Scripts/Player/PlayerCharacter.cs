@@ -51,10 +51,6 @@ public class PlayerCharacter : MonoBehaviour
             BombFire(1);
         }
         #endregion
-
-
-
-
     }   
 
     void BombFiller()
@@ -69,7 +65,7 @@ public class PlayerCharacter : MonoBehaviour
 
     bool DisplayBombNumber(float _bombs, int pointNumber)
     {
-        return ((pointNumber * 10) >= _bombs);
+        return ((pointNumber) >= _bombs);
     }
 
     public void BombFire(float usedBomb)

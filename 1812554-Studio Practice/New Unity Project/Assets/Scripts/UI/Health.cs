@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
-{
-    public Text healthText;
+{    
     public Image healthBar;
     public Image[] healthPoints;
 
@@ -18,8 +17,7 @@ public class Health : MonoBehaviour
     }
 
     private void Update()
-    {
-        healthText.text = "Health " + health + "%";
+    {        
         if (health > maxHealth) health = maxHealth;
 
         lerpSpeed = 3f * Time.deltaTime;
