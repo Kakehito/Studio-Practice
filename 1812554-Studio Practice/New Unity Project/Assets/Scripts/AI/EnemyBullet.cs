@@ -6,26 +6,39 @@ public class EnemyBullet : MonoBehaviour
 {
     public float speed;
 
-    // Update is called once per frame
+
+
+    private void Start()
+    {
+        Invoke("destruct", 2);
+    }
+  
     void Update()
     {
-        transform.localPosition += new Vector3(0, 0, (transform.localPosition.z + speed) * Time.deltaTime);
+        transform.localPosition += (transform.forward * speed) * Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "Player")
         {
-            if(collision.transform.GetComponent<PlayerMovement>().Shield <= 0)
+            if(collision.transform.GetComponent<PlayerCharacter>().Shield <= 0)
             {
-                collision.transform.GetComponent<PlayerMovement>().Health--;
+                collision.transform.GetComponent<PlayerCharacter>().Health--;
             }
             else
             {
-                collision.transform.GetComponent<PlayerMovement>().Shield--;
+                collision.transform.GetComponent<PlayerCharacter>().Shield--;
             }
          
         }
+        Destroy(gameObject);
+    }
+
+
+
+    void destruct()
+    {
         Destroy(gameObject);
     }
 }

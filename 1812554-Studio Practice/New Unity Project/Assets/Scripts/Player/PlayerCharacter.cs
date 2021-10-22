@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerCharacter : MonoBehaviour
 {
     public CharacterController controller;
 
@@ -30,6 +30,6 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-  
+
     }
 }

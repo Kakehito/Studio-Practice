@@ -11,11 +11,11 @@ public class InGameUI : MonoBehaviour
 
 
     GameManager World;
-    PlayerMovement Player;
+    PlayerCharacter Player;
     private void Start()
     {
         World = GameManager.instance;
-        Player = World.PlayerCharacter.GetComponent<PlayerMovement>();
+        Player = World.PlayerCharacter.GetComponent<PlayerCharacter>();
     }
 
 

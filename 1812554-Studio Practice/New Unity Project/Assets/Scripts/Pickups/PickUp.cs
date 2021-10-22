@@ -11,9 +11,9 @@ public class PickUp : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            other.transform.GetComponent<PlayerMovement>().Health += HealthtoRestore;
-            other.transform.GetComponent<PlayerMovement>().AttackDamage += AttackUp;
-            other.transform.GetComponent<PlayerMovement>().Shield += ShieldUp;
+            other.transform.GetComponent<PlayerCharacter>().Health += HealthtoRestore;
+            other.transform.GetComponent<PlayerCharacter>().AttackDamage += AttackUp;
+            other.transform.GetComponent<PlayerCharacter>().Shield += ShieldUp;
             Destroy(gameObject);
         }
     }

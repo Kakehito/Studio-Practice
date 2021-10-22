@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed; 
+    public float speed;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Invoke("destruct", 2);
+    }
+    
     void Update()
     {
-        transform.localPosition += new Vector3(0, 0, (transform.localPosition.z + speed) * Time.deltaTime);
+        transform.localPosition += (transform.forward * speed) * Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -18,6 +22,11 @@ public class Bullet : MonoBehaviour
         {
             collision.transform.GetComponent<EnemyAI>().Health--;
         }
+        Destroy(gameObject);
+    }
+
+    void destruct()
+    {
         Destroy(gameObject);
     }
 }

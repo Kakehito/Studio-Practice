@@ -7,14 +7,15 @@ public class EnemyAI : MonoBehaviour
 
 
     Animator anim;
+ 
+
     public Transform MovePoint;
     public float Speed;
-
     public int Health;
 
     private void Start()
     {
- 
+   
         MovePoint.parent = null;
         anim = MovePoint.GetComponent<Animator>();
     }
@@ -42,13 +43,13 @@ public class EnemyAI : MonoBehaviour
      
             anim.enabled = false;
         }
-     
 
-          
+      
+
 
     }
 
 
-
+  
 
 }
