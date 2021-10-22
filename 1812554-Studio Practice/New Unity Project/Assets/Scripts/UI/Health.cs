@@ -7,8 +7,10 @@ public class Health : MonoBehaviour
 {
     public Text healthText;
     public Image healthBar;
+    public Image[] healthPoints;
 
     float health, maxHealth = 100;
+    float lerpSpeed;
 
     private void Start()
     {
@@ -19,12 +21,25 @@ public class Health : MonoBehaviour
     {
         healthText.text = "Health " + health + "%";
         if (health > maxHealth) health = maxHealth;
+
+        lerpSpeed = 3f * Time.deltaTime;
+
         HealthBarFiller();
     }
 
     void HealthBarFiller()
     {
-        healthBar.fillAmount = health / maxHealth;
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
+
+        for(int i=0; i < healthPoints.Length; i++)
+        {
+            healthPoints[i].enabled = !DisplayHealthPoint(health, i);
+        }
+    }
+
+    bool DisplayHealthPoint(float _health, int pointNumber)
+    {
+        return ((pointNumber * 10) >= _health);
     }
 
     public void Damage(float damagePoints)
