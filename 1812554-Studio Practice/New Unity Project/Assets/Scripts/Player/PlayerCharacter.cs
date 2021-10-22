@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public CharacterController controller;
+    
+    CharacterController controller;
 
     public float speed = 6f;
     public int Health = 3;
@@ -22,6 +23,7 @@ public class PlayerCharacter : MonoBehaviour
     private void Start()
     {
         bombs = maxBombs;
+        controller = GetComponent<CharacterController>();
     }    
     
     void Update()
@@ -44,13 +46,14 @@ public class PlayerCharacter : MonoBehaviour
         lerpSpeed = 3f * Time.deltaTime;
 
         BombFiller();
+        if (Input.GetButtonDown("Bomb"))
+        {
+            BombFire(1);
+        }
         #endregion
 
 
-        if (Input.GetButtonDown("Bomb"))
-        {
-            Bomb();
-        }
+
 
     }   
 
