@@ -16,6 +16,10 @@ public class EnemyBullet : MonoBehaviour
     void Update()
     {
         transform.localPosition += (transform.forward * speed) * Time.deltaTime;
+        if (Input.GetButtonDown("Bomb"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

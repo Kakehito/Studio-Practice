@@ -44,7 +44,10 @@ public class EnemyAI : MonoBehaviour
             anim.enabled = false;
         }
 
-      
+        if (Input.GetButtonDown("Bomb"))
+        {
+            Health -= 10;
+        }
 
 
     }
