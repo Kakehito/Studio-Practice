@@ -29,7 +29,16 @@ public class PlayerCharacter : MonoBehaviour
         #endregion
 
 
+        if (Input.GetButtonDown("Bomb"))
+        {
+            Bomb();
+        }
 
+    }
+
+
+    void Bomb()
+    {
 
     }
 }
