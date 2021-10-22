@@ -25,6 +25,12 @@ public class Health : MonoBehaviour
         lerpSpeed = 3f * Time.deltaTime;
 
         HealthBarFiller();
+
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Damage(1);
+        }
     }
 
     void HealthBarFiller()

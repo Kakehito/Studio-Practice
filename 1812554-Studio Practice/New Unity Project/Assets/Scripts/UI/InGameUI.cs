@@ -14,15 +14,15 @@ public class InGameUI : MonoBehaviour
     PlayerCharacter Player;
     private void Start()
     {
-        World = GameManager.instance;
-        Player = World.PlayerCharacter.GetComponent<PlayerCharacter>();
+    //    World = GameManager.instance;
+       // Player = World.PlayerCharacter.GetComponent<PlayerCharacter>();
     }
 
 
     private void FixedUpdate()
     {
-        healthbar.value = Player.Health;
-        BombCounter.text = Convert.ToString(Player.Bombs);
+      //  healthbar.value = Player.Health;
+      //  BombCounter.text = Convert.ToString(Player.Bombs);
     }
 
 
