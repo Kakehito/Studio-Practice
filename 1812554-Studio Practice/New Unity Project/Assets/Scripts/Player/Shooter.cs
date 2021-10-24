@@ -6,13 +6,20 @@ public class Shooter : MonoBehaviour
 {
 
     public Transform Bullet;
-
+    public float AttackRate;
+    float rate;
     // Update is called once per frame
     void Update()
     {
+        rate -= Time.deltaTime;
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(Bullet, transform.position, transform.rotation);
+            if(rate <= 0)
+            {
+                Instantiate(Bullet, transform.position, transform.rotation);
+                rate = AttackRate;
+            }
+           
         }
     }
 }
