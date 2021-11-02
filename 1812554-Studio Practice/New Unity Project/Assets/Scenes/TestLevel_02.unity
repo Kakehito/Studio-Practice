@@ -238,9 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc608072157c84e44b4dc4190f7f07f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shooters_01: []
-  Shooters_02: []
-  Shooters_03: []
+  Shooters_01: {fileID: 0}
+  Shooters_02: {fileID: 0}
+  Shooters_03: {fileID: 0}
 --- !u!65 &610444626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -361,6 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1869562653690685065, guid: 9ea7718752f2a744faa6034d08bfcb86, type: 3}
+  AttackRate: 0
 --- !u!1 &1346156739
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,9 +498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc608072157c84e44b4dc4190f7f07f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shooters_01: []
-  Shooters_02: []
-  Shooters_03: []
+  Shooters_01: {fileID: 0}
+  Shooters_02: {fileID: 0}
+  Shooters_03: {fileID: 0}
 --- !u!1 &1633010985
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1869562653690685065, guid: 9ea7718752f2a744faa6034d08bfcb86, type: 3}
+  AttackRate: 0
 --- !u!1 &1848877752
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1869562653690685065, guid: 9ea7718752f2a744faa6034d08bfcb86, type: 3}
+  AttackRate: 0
 --- !u!1 &6045448799029243835
 GameObject:
   m_ObjectHideFlags: 0
