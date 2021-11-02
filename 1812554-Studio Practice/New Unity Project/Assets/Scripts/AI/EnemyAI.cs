@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     public Transform MovePoint;
     public float Speed;
-    public int Health;
+  
 
     private void Start()
     {
@@ -28,10 +28,7 @@ public class EnemyAI : MonoBehaviour
 
 
         
-        if(Health <= 0)
-        {
-            Destroy(gameObject);
-        }
+       
         if (Vector3.Distance(transform.position, MovePoint.position) <= .1f)
         {
             anim.enabled = true;
@@ -44,10 +41,7 @@ public class EnemyAI : MonoBehaviour
             anim.enabled = false;
         }
 
-        if (Input.GetButtonDown("Bomb"))
-        {
-            Health -= 10;
-        }
+   
 
 
     }

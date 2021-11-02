@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        Invoke("destruct", 2);
+        Invoke("destruct", 3);
     }
     
     void Update()
@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            collision.transform.GetComponent<EnemyAI>().Health--;
+            collision.transform.GetComponent<EnemyLife>().Health--;
         }
         Destroy(gameObject);
     }
