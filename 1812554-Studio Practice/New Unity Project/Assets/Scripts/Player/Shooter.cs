@@ -12,7 +12,7 @@ public class Shooter : MonoBehaviour
     void Update()
     {
         rate -= Time.deltaTime;
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             if(rate <= 0)
             {
