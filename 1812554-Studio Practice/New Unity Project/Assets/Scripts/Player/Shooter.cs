@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    
 
     public Transform Bullet;
     public float AttackRate;

@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         transform.localPosition += (transform.forward * speed) * Time.deltaTime;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.tag == "Enemy")
         {
