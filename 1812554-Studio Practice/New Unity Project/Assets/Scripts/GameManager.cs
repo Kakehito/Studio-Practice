@@ -14,4 +14,10 @@ public class GameManager : MonoBehaviour
 
     public Transform PlayerCharacter;
 
+
+
+    public void GameOver()
+    {
+        Destroy(PlayerCharacter);
+    }
 }

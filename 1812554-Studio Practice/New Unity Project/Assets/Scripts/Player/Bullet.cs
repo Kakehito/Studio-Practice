@@ -1,20 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody))]
 public class Bullet : MonoBehaviour
 {
     public float speed;
-
+    Rigidbody RB;
     private void Start()
     {
-        Invoke("destruct", 3);
+     Invoke("destruct", 3);
+        RB = GetComponent<Rigidbody>();
     }
     
     void Update()
     {
-        transform.localPosition += (transform.forward * speed) * Time.deltaTime;
+        RB.velocity = (transform.forward * speed) * Time.deltaTime;
     }
+
+
+
+
+
+
+
 
     public void OnCollisionEnter(Collision collision)
     {
