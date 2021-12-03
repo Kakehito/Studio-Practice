@@ -28,16 +28,16 @@ public class EnemyBullet : MonoBehaviour
         {
             if(collision.transform.GetComponent<PlayerCharacter>().Shield <= 0)
             {
-                collision.transform.GetComponent<PlayerCharacter>().Health--;
-              
-                if(collision.transform.GetComponent<PlayerCharacter>().Health <= 0)
+                collision.transform.GetComponent<PlayerCharacter>().Health-=10;
+                collision.transform.GetComponent<Health>().health = collision.transform.GetComponent<PlayerCharacter>().Health;
+                if (collision.transform.GetComponent<PlayerCharacter>().Health <= 0)
                 {
                     GameManager.instance.GameOver();
                 }
             }
             else
             {
-                collision.transform.GetComponent<PlayerCharacter>().Shield--;
+                collision.transform.GetComponent<PlayerCharacter>().Shield-=10;
             }
            
             Destroy(gameObject);

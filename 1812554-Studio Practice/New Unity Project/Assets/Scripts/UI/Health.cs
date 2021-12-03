@@ -19,11 +19,7 @@ public class Health : MonoBehaviour
     }
 
     private void Update()
-    {
-
-        health = player.Health;
-
-
+    {    
         HealthFill();
     }
     void HealthFill()
