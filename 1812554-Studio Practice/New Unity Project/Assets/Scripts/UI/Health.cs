@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {    
     public Image healthBar;
-    public Image[] healthPoints;
+    public List<Image> healthPoints;
 
     float health, maxHealth = 100;
     float lerpSpeed;
@@ -25,17 +25,28 @@ public class Health : MonoBehaviour
         if (health > maxHealth) health = maxHealth;
                 
         lerpSpeed = 3f * Time.deltaTime;
-
-        HealthBarFiller();        
+      
+        //HealthBarFiller();        
     }
 
-    void HealthBarFiller()
-    {
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
+    //void HealthBarFiller()
+    //{
+    //    healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
 
-        for(int i=0; i < healthPoints.Length; i++)
+    //    for(int i=0; i < healthPoints.Length; i++)
+    //    {
+    //        healthPoints[i].enabled = !DisplayHealthPoint(health, i);
+    //    }
+    //}
+
+    public void UpdateHealth()
+    {
+        List<Image> t;
+        t = healthPoints;
+        healthPoints.Clear();
+        for(int x = player.Health; x >= 0; x--)
         {
-            healthPoints[i].enabled = !DisplayHealthPoint(health, i);
+            healthPoints.Add(t[x]);
         }
     }
 
@@ -43,7 +54,7 @@ public class Health : MonoBehaviour
     {
         return ((pointNumber * 10) >= _health);
     }
-
+        
     public void Damage(float damagePoints)
     {
         if (health > 0)

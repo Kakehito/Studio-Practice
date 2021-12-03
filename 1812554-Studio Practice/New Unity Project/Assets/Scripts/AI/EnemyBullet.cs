@@ -29,7 +29,7 @@ public class EnemyBullet : MonoBehaviour
             if(collision.transform.GetComponent<PlayerCharacter>().Shield <= 0)
             {
                 collision.transform.GetComponent<PlayerCharacter>().Health--;
-                collision.transform.GetComponent<Health>().Damage(1);
+                collision.transform.GetComponent<Health>().UpdateHealth();
                 if(collision.transform.GetComponent<PlayerCharacter>().Health <= 0)
                 {
                     GameManager.instance.GameOver();
