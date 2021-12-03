@@ -18,6 +18,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Destroy(PlayerCharacter);
+        Destroy(PlayerCharacter.gameObject);
     }
 }

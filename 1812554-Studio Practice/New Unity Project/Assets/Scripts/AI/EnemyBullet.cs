@@ -7,8 +7,6 @@ public class EnemyBullet : MonoBehaviour
     public float speed;
     Rigidbody RB;
 
-
-
     private void Start()
     {
         Invoke("destruct", 3);
@@ -24,12 +22,6 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "Player")
@@ -37,6 +29,7 @@ public class EnemyBullet : MonoBehaviour
             if(collision.transform.GetComponent<PlayerCharacter>().Shield <= 0)
             {
                 collision.transform.GetComponent<PlayerCharacter>().Health--;
+                collision.transform.GetComponent<Health>().Damage(1);
                 if(collision.transform.GetComponent<PlayerCharacter>().Health <= 0)
                 {
                     GameManager.instance.GameOver();

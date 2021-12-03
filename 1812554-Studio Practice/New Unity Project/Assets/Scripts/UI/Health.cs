@@ -11,15 +11,19 @@ public class Health : MonoBehaviour
     float health, maxHealth = 100;
     float lerpSpeed;
 
+    PlayerCharacter player;
+
     private void Start()
     {
         health = maxHealth;
+
+        player = GetComponent<PlayerCharacter>();
     }
 
     private void Update()
     {        
         if (health > maxHealth) health = maxHealth;
-
+                
         lerpSpeed = 3f * Time.deltaTime;
 
         HealthBarFiller();        

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1335,6 +1335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869088803}
+  - component: {fileID: 869088804}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1360,6 +1361,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869088804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869088802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17275977eda37c4d8be9a2e0502b5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCharacter: {fileID: 1999868335}
 --- !u!1 &874903189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,6 +3301,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973964704}
   m_CullTransparentMesh: 1
+--- !u!1 &1999868328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6045448799262105197, guid: 331ff7955e7b3b9459db5e081d1333ba, type: 3}
+  m_PrefabInstance: {fileID: 6045448799218041724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1999868335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6045448799262105194, guid: 331ff7955e7b3b9459db5e081d1333ba, type: 3}
+  m_PrefabInstance: {fileID: 6045448799218041724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999868336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999868328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805801e003f94f045a265574ded093c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1611960440}
+  healthPoints:
+  - {fileID: 1127584124}
+  - {fileID: 1834071}
+  - {fileID: 612888513}
+  - {fileID: 1973964706}
+  - {fileID: 902441802}
+  - {fileID: 212916720}
+  - {fileID: 130284640}
+  - {fileID: 1817771463}
+  - {fileID: 1120211112}
+  - {fileID: 1151996346}
 --- !u!1 &2065138621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,6 +3559,10 @@ PrefabInstance:
     - target: {fileID: 6045448799262105197, guid: 331ff7955e7b3b9459db5e081d1333ba, type: 3}
       propertyPath: m_Name
       value: PlayerPlaceholder
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045448799262105198, guid: 331ff7955e7b3b9459db5e081d1333ba, type: 3}
+      propertyPath: Health
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6045448799262105198, guid: 331ff7955e7b3b9459db5e081d1333ba, type: 3}
       propertyPath: bombBar
