@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1714,7 +1714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805801e003f94f045a265574ded093c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1525462986}
   healthPoints:
   - {fileID: 1127584124}
   - {fileID: 1834071}
@@ -1726,6 +1725,8 @@ MonoBehaviour:
   - {fileID: 1817771463}
   - {fileID: 1120211112}
   - {fileID: 1151996346}
+  health: 0
+  maxhealth: 100
 --- !u!1 &1120211110
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,7 +3324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805801e003f94f045a265574ded093c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1611960440}
   healthPoints:
   - {fileID: 1127584124}
   - {fileID: 1834071}
@@ -3335,6 +3335,8 @@ MonoBehaviour:
   - {fileID: 1817771463}
   - {fileID: 1120211112}
   - {fileID: 1151996346}
+  health: 0
+  maxhealth: 100
 --- !u!1 &2065138621
 GameObject:
   m_ObjectHideFlags: 0
