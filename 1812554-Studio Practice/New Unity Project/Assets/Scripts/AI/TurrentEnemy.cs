@@ -38,7 +38,7 @@ public class TurrentEnemy : MonoBehaviour
             if(rate <= 0)
             {
                 transform.LookAt(Player);
-                Instantiate(Bullet, transform.position, Shooter.rotation);
+                Instantiate(Bullet, Shooter.position, Shooter.rotation);
                 rate = FireRate;
             }
            
@@ -48,6 +48,6 @@ public class TurrentEnemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position, AttackRange);
+        Gizmos.DrawWireSphere(transform.position, AttackRange);
     }
 }
