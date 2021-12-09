@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 953592129011663303}
   - component: {fileID: 953592129011663298}
   - component: {fileID: 953592129011663297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 953592129149314842}
   - component: {fileID: 953592129149314836}
   - component: {fileID: 953592129149314837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kamikaze Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

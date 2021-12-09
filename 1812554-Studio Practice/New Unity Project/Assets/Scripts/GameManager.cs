@@ -20,4 +20,9 @@ public class GameManager : MonoBehaviour
     {
         Destroy(PlayerCharacter.gameObject);
     }
+
+    public void Victory()
+    {
+
+    }
 }

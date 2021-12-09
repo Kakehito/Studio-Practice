@@ -7,9 +7,10 @@ public class EnemyBullet : MonoBehaviour
     public float speed;
     Rigidbody RB;
 
+    public float stayTime = 3;
     private void Start()
     {
-        Invoke("destruct", 3);
+        Invoke("destruct", stayTime);
         RB = GetComponent<Rigidbody>();
     }
 
